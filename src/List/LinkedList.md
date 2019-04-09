@@ -1,27 +1,27 @@
 [TOC]
 
-### 一、顶部注释分析
+## 一、顶部注释分析
 
-#### 1.1 首句定义
+### 1.1 首句定义
 
 + Doubly-linked list implementation of the List and Deque interfaces
 + LinkedList 是 List 接口和 Deque 接口的**双向链表**实现
 
-#### 1.2 从注释中得到的结论
+
+
+### 1.2 从注释中得到的结论
 
 + `permits all elements (including null)`：LinkList **允许null元素**
 + `All of the operations perform as could be expected for a doubly-linked`：所有的**操作都针对双向链表**
 - `Note that this implementation is not synchronized`：LinkedList**不是线程安全**的
-- 是否同步：ArrayList 不是同步的，即线程不安全
-- 迭代器：ArrayList 的 iterator 和 listIterator 方法返回的迭代器是 fail-fast 的，若修改会抛出 ConcurrentModificationException 异常
 - `Collections.synchronizedList`方法可以实现线程安全的操作
-- 由 iterator() 和 listIterator() 返回的迭代器是 fail-fast 的
+- 由 iterator() 和 listIterator() 返回的迭代器是 `fail-fast` 的
 
 
 
-### 二、源码分析
+## 二、源码分析
 
-#### 2.1 定义
+### 2.1 定义
 
 ```java
 public class LinkedList<E> extends AbstractSequentialList<E>
@@ -36,7 +36,9 @@ public class LinkedList<E> extends AbstractSequentialList<E>
 + implements **java.io.Serializable**：具有序列化功能
 + **没有实现 RandomAccess 接口**，因此不像 ArrayList 一样支持快速随机访问
 
-#### 2.2 字段
+
+
+### 2.2 字段
 
 ```java
 // LinkedList节点个数
@@ -64,13 +66,16 @@ private static class Node<E>
 }
 ```
 
-#### 2.3 构造方法
+
+
+### 2.3 构造方法
 
 1. `public LinkedList() {}`：构造一个空链表
 2. `public LinkedList(Collection<? extends E> c)`：根据指定集合构造LinkedList。步骤为先构造一个空Linkedlist，再把指定集合中的所有元素都添加到LinkedList中
 
 
-#### 2.4 添加元素
+
+### 2.4 添加元素
 
 + add 方法实际上会调用 linkLast 方法，即在链表最后添加元素
 
@@ -102,7 +107,9 @@ void linkLast(E e)
 }
 ```
 
-#### 2.5 get、set、remove
+
+
+### 2.5 get、set、remove
 
 + 三者中都调用了 `node(index)` 方法，用于返回在指定索引处的非空元素
 + 在查找时有一个优化点是：**若 index 小于总长度的一半，则从头开始遍历；否则从尾开始遍历**
@@ -201,7 +208,9 @@ E unlink(Node<E> x)
 }
 ```
 
-#### 2.6 队列操作（添加、删除、获取）
+
+
+### 2.6 队列操作（添加、删除、获取）
 
 + 总结：
     1. 常用的插入、删除、获取方法都存在两种形式：在操作失败时，一种抛出异常，另一种返回一个特殊值（null 或 false，具体取决于操作）
@@ -235,7 +244,7 @@ public boolean add(E e)
 |  方法  |            操作失败时的处理方式            |
 | :----: | :----------------------------------------: |
 | remove | 若头部元素为空会抛出NoSuchElementException |
-| offer  |         不抛出异常，只是返回 null          |
+|  poll  |         不抛出异常，只是返回 null          |
 
 ```java
 public E poll() 
@@ -287,7 +296,9 @@ public E getFirst()
 }
 ```
 
-#### 2.7 栈操作（入栈、出栈、获取栈顶）
+
+
+### 2.7 栈操作（入栈、出栈、获取栈顶）
 
 + 具体实现方式和队列类似，当利用LinkedList实现栈时使用
 

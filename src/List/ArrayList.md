@@ -1,12 +1,14 @@
 [TOC]
 
-### 一、 顶部注释分析
+## 一、 顶部注释分析
 
-#### 1.1 首句定义
+### 1.1 首句定义
 
 + Resizable-array implementation of the `List` interface：`List` 接口的**大小可变**数组的实现
 
-#### 1.2 从注释中得到的结论
+
+
+### 1.2 从注释中得到的结论
 
 + **底层**：`ArrayList` 是 `List` 接口的大小可变数组的实现，即 `implements List<E>`
 + **是否允许null**：ArrayList **允许null 元素**
@@ -16,9 +18,9 @@
 + **迭代器**：ArrayList 的 iterator 和 listIterator 方法返回的迭代器是 `fail-fast` 的，若修改会抛出 `ConcurrentModificationException` 异常
 
 
-### 二、源码分析
+## 二、源码分析
 
-#### 2.1 定义
+### 2.1 定义
 
 ```java
 public class ArrayList<E> extends AbstractList<E> 
@@ -32,7 +34,9 @@ public class ArrayList<E> extends AbstractList<E>
 + implements **Cloneable**：可以调用 clone() 方法来返回实例的 `field-for-field` 拷贝
 + implements **java.io.Serializable**：具有序列化功能
 
-#### 2.2 字段
+
+
+### 2.2 字段
 
 ```java
 // 默认初始化容量10
@@ -63,14 +67,17 @@ private int size;
 private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 ```
 
-#### 2.3 构造方法
+
+
+### 2.3 构造方法
 
 1. `ArrayList(int initialCapacity)`：构造一个指定容量为capacity的空ArrayList，容量为0则`this.elementData = EMPTY_ELEMENTDATA`，不为0则新建 `new Object[initialCapacity]`
 2. `ArrayList()`：构造一个空数组，`this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA`
 3. `ArrayList(Collection<? extends E> c)`：构造一个包含指定 collection 的元素的列表，这些元素是按照该 collection 的迭代器返回它们的顺序排列的。
 
 
-#### 2.4 添加元素
+
+### 2.4 添加元素
 
 + 添加元素分两个步骤：
   1. 空间检查，如果有需要进行扩容；
@@ -85,7 +92,9 @@ public boolean add(E e)
 }
 ```
 
-#### 2.5 容量检查和扩容
+
+
+### 2.5 容量检查和扩容
 
 1. 若 `elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA` ，则取minCapacity为默认容量和传入容量参数之间的最大值；
 2. 否则执行 3 进行明确的容量检查；
@@ -129,7 +138,9 @@ private void grow(int minCapacity)
 }
 ```
 
-#### 2.5 get、set、remove、trimToSize
+
+
+### 2.6 get、set、remove、trimToSize
 
 + 三者首先都需要进行范围检查
 
@@ -213,7 +224,9 @@ public void trimToSize()
 }
 ```
 
-#### 2.6 modCount
+
+
+### 2.7 modCount
 
 + modCount 继承于 AbstractList，它记录的是**集合的修改次数**，例如每次 add 或者 remove 它的值都会加1
 + 它的作用是当执行一些**迭代器操作**时，由于ArrayList是非线程安全的，因此每次执行时：
