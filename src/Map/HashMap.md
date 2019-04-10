@@ -4,7 +4,7 @@
 
 ### 1.1 数据结构
 
-![HashMap](http://ww1.sinaimg.cn/mw690/d8e93840ly1g1w5i67o5yj20m70h73zz.jpg)
+![HashMap](https://ws3.sinaimg.cn/large/006oCwEfly1g1xghjaxycj30j60evwfm.jpg)
 
 + HashMap的数据结构是 **数组+链表+红黑树** (JDK1.8)
 + 数组中的每一个节点可称为是**桶**。当向 HashMap 中添加一个键值对时，首先计算键值对中key的hash值，以此确定数组中对应的桶，但是可能存在同一hash值的元素已经被放在该桶中，这种现象称为 **hash碰撞**
@@ -36,7 +36,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
 		implements Map<K,V>, Cloneable, Serializable
 ```
 
-+ HashMap<K,V>：HashMap 是以 key-value 形式存储数据的。
++ HashMap<K,V>：HashMap 是以 key-value 形式存储数据的
 + extends **AbstractMap**<K,V>：继承自 AbstractMap，大大减少了实现 Map 接口时需要的工作量
 + implements **Map**<K,V>：实现了Map接口，提供了所有可选的 Map 操作
 + implements **Cloneable**：可以调用 clone() 方法来返回实例的 `field-for-field` 拷贝
@@ -158,7 +158,7 @@ static final int hash(Object key)
 }
 ```
 
-![hash运算](http://ww1.sinaimg.cn/mw690/d8e93840ly1g1wcoavtibj20ii094wf8.jpg)
+![hash运算](https://ws3.sinaimg.cn/large/006oCwEfly1g1xghj9vwkj30ii094jsh.jpg)
 
 #### 2.6.2 计算原理
 

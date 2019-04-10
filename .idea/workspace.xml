@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="767a84bd-c9da-4ce1-8ecc-0500378bb572" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/List/ArrayList.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/List/ArrayList.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/List/LinkedList.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/List/LinkedList.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/List/Vector.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/List/Vector.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/HashMap.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/HashMap.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/LinkedHashMap.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/LinkedHashMap.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="1040" column="46" selection-start-line="1040" selection-start-column="36" selection-end-line="1040" selection-end-column="46" />
+            <state relative-caret-position="218">
+              <caret line="376" column="21" selection-start-line="376" selection-start-column="21" selection-end-line="376" selection-end-column="21" />
               <folding>
                 <element signature="e#12815#12816#0" expanded="true" />
                 <element signature="e#12893#12894#0" expanded="true" />
@@ -41,15 +40,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/LinkedHashMap.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="97" column="15" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="97" selection-end-column="15" />
+            <state relative-caret-position="344">
+              <caret line="945" column="34" lean-forward="true" selection-start-line="945" selection-start-column="34" selection-end-line="945" selection-end-column="34" />
               <folding>
-                <element signature="e#8806#8807#0" expanded="true" />
-                <element signature="e#8859#8860#0" expanded="true" />
-                <element signature="e#19667#19668#0" expanded="true" />
-                <element signature="e#19695#19696#0" expanded="true" />
+                <element signature="e#30335#30336#0" expanded="true" />
+                <element signature="e#30400#30401#0" expanded="true" />
+                <element signature="e#32334#32335#0" expanded="true" />
+                <element signature="e#32385#32386#0" expanded="true" />
+                <element signature="e#39094#39095#0" expanded="true" />
+                <element signature="e#39146#39147#0" expanded="true" />
+                <element signature="e#44347#44348#0" expanded="true" />
+                <element signature="e#44395#44396#0" expanded="true" />
+                <element signature="e#48122#48123#0" expanded="true" />
+                <element signature="e#48173#48174#0" expanded="true" />
+                <element signature="e#93710#93711#0" expanded="true" />
+                <element signature="e#93797#93798#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,6 +75,10 @@
       <find>(hash &amp; 0x7FFFFFFF) % tab.length</find>
       <find>synchronize</find>
       <find>LRU</find>
+      <find>null</find>
+      <find>1.8</find>
+      <find>synchronized</find>
+      <find>resize</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -82,37 +93,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="JavaCollection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaCollection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaCollection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaCollection" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaCollection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaCollection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaCollection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaCollection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="List" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -150,19 +131,21 @@
       <updated>1554728992127</updated>
       <workItem from="1554728993635" duration="144000" />
       <workItem from="1554774827365" duration="5703000" />
-      <workItem from="1554786966499" duration="17541000" />
+      <workItem from="1554786966499" duration="17906000" />
+      <workItem from="1554860444680" duration="644000" />
+      <workItem from="1554878770948" duration="15488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23388000" />
+    <option name="totallyTimeSpent" value="39885000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4957507" weight="0.20375335" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5042493" side_tool="true" visible="true" weight="0.20643431" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5042493" side_tool="true" visible="true" weight="0.21179625" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -237,17 +220,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="99" column="14" lean-forward="true" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
-          <folding>
-            <element signature="e#10065#10066#0" expanded="true" />
-            <element signature="e#10148#10149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Dictionary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -284,10 +256,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/WeakHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="651" column="15" selection-start-line="651" selection-start-column="15" selection-end-line="651" selection-end-column="15" />
+          <folding>
+            <element signature="e#33704#33705#0" expanded="true" />
+            <element signature="e#33754#33755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/SortedMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="112" column="36" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/NavigableMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1163">
+          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="true" />
+            <element signature="e#10148#10149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Comparable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="1232" column="22" selection-start-line="1232" selection-start-column="22" selection-end-line="1232" selection-end-column="22" />
+          <folding>
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46458#46459#0" expanded="true" />
+            <element signature="e#47036#47037#0" expanded="true" />
+            <element signature="e#47092#47093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="998" column="22" selection-start-line="998" selection-start-column="22" selection-end-line="998" selection-end-column="22" />
+          <folding>
+            <element signature="e#38307#38308#0" expanded="true" />
+            <element signature="e#38372#38373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="1152" column="15" selection-start-line="1152" selection-start-column="15" selection-end-line="1152" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/LinkedHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="117" column="13" lean-forward="true" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+          <folding>
+            <element signature="e#8806#8807#0" expanded="true" />
+            <element signature="e#8859#8860#0" expanded="true" />
+            <element signature="e#19667#19668#0" expanded="true" />
+            <element signature="e#19695#19696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/TreeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="106" column="18" lean-forward="true" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
+          <folding>
+            <element signature="e#5767#5768#0" expanded="true" />
+            <element signature="e#5800#5801#0" expanded="true" />
+            <element signature="e#6596#6597#0" expanded="true" />
+            <element signature="e#6640#6641#0" expanded="true" />
+            <element signature="e#37698#37699#0" expanded="true" />
+            <element signature="e#37763#37764#0" expanded="true" />
+            <element signature="e#44090#44091#0" expanded="true" />
+            <element signature="e#44126#44127#0" expanded="true" />
+            <element signature="e#44165#44166#0" expanded="true" />
+            <element signature="e#44207#44208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/concurrent/ConcurrentMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="43" selection-start-line="43" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="1040" column="46" selection-start-line="1040" selection-start-column="36" selection-end-line="1040" selection-end-column="46" />
+        <state relative-caret-position="218">
+          <caret line="376" column="21" selection-start-line="376" selection-start-column="21" selection-end-line="376" selection-end-column="21" />
           <folding>
             <element signature="e#12815#12816#0" expanded="true" />
             <element signature="e#12893#12894#0" expanded="true" />
@@ -307,15 +392,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/LinkedHashMap.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="97" column="15" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="97" selection-end-column="15" />
+        <state relative-caret-position="344">
+          <caret line="945" column="34" lean-forward="true" selection-start-line="945" selection-start-column="34" selection-end-line="945" selection-end-column="34" />
           <folding>
-            <element signature="e#8806#8807#0" expanded="true" />
-            <element signature="e#8859#8860#0" expanded="true" />
-            <element signature="e#19667#19668#0" expanded="true" />
-            <element signature="e#19695#19696#0" expanded="true" />
+            <element signature="e#30335#30336#0" expanded="true" />
+            <element signature="e#30400#30401#0" expanded="true" />
+            <element signature="e#32334#32335#0" expanded="true" />
+            <element signature="e#32385#32386#0" expanded="true" />
+            <element signature="e#39094#39095#0" expanded="true" />
+            <element signature="e#39146#39147#0" expanded="true" />
+            <element signature="e#44347#44348#0" expanded="true" />
+            <element signature="e#44395#44396#0" expanded="true" />
+            <element signature="e#48122#48123#0" expanded="true" />
+            <element signature="e#48173#48174#0" expanded="true" />
+            <element signature="e#93710#93711#0" expanded="true" />
+            <element signature="e#93797#93798#0" expanded="true" />
           </folding>
         </state>
       </provider>
