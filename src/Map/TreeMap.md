@@ -5,7 +5,7 @@
 ### 1.1 首句分析
 
 + A Red-Black tree based NavigableMap implementation. The map is sorted according to the  Comparable natural ordering of its keys, or by a Comparator provided at map creation time, depending on which constructor is used.
-+ TreeMap是基于 NavigableMap 的**红黑树**实现。
++ TreeMap是基于**红黑树**的 NavigableMap 实现
 + TreeMap根据**键的自然顺序**进行排序，或者根据创建map时提供的**Comparator**进行排序，使用哪种取决于使用哪个构造方法
 
 
