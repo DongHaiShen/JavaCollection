@@ -241,6 +241,7 @@ public boolean add(E e)
 
 
 + 删除**头部**元素：poll 和 remove，两者最终调用的都是 `unlinkFirst(f)`，但是两者的区别为：
+
 |  方法  |            操作失败时的处理方式            |
 | :----: | :----------------------------------------: |
 | remove | 若头部元素为空会抛出NoSuchElementException |
@@ -270,6 +271,7 @@ public E removeFirst()
 
 
 + 获取头部元素：element 和 peek，两者最终都是访问 `f.item`，但是两者的区别为：
+
 |  方法   |            操作失败时的处理方式            |
 | :-----: | :----------------------------------------: |
 | element | 若头部元素为空会抛出NoSuchElementException |

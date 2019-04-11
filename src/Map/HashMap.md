@@ -175,7 +175,7 @@ static final int hash(Object key)
 
 + 向HashMap对象里不停的添加元素，当其内部数组无法装载更多的元素时，就需要进行扩容；
 + 数组是无法自动扩容的，扩容方法是使用一个新数组代替已有数组；
-+ resize 方法非常巧妙：因为每次扩容都是翻倍，与原来位置`(n-1) & hash` 的结果相比，节点要么就在原来的位置，要么就被分配到 “原位置+旧容量” 这个位置
++ resize 方法非常巧妙：因为每次扩容都是翻倍，与原来位置`(n-1) & hash` 的结果相比，**节点要么就在原来的位置，要么就被分配到 “原位置+旧容量” 这个位置**
 + 大致步骤如下：
     1. 如果旧容量已经超过最大阈值，则无法继续扩容，返回旧 HashMap；
     2. 否则将容量阈值**加倍**，即 `newThr = oldThr << 1`；
@@ -290,7 +290,7 @@ public V remove(Object key)
 ```java
 // mathValue为true时，则必须value也相等才会删除
 // movable为false时，删除该节点不会移动其他节点，主要针对红黑树结构
-final Node<K,V> removeNode(int hash, Object key, Object value, boolean matchValue, 									boolean movable) 
+final Node<K,V> removeNode(int hash, Object key, Object value, boolean matchValue, boolean movable) 
 ```
 
 执行步骤如下：
